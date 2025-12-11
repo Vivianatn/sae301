@@ -3,19 +3,58 @@
 {% block title %}Accueil{% endblock %}
 
 {% block main %}
-<div class="banniere">
-    <img src="{{ asset('../assets/images/banniere.png') }}" alt="Bannière">
-    <div class="banniere-text">
-        <h1>Divination</h1>
+<div class="banniere relative w-full min-h-screen h-auto flex items-center justify-center overflow-hidden sm:min-h-[50vh] xs:min-h-[40vh] lg:min-h-[70vh]">
+    <img src="{{ asset('images/banniere.png') }}" alt="Bannière" class="min-h-[60vh] block object-contain object-center sm:min-h-[50vh] xs:min-h-[40vh] lg:min-h-[70vh]">
+    <div class="banniere-text absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-10 w-full max-w-full p-4 sm:p-3 xs:p-2">
+        <h1 class="m-0 text-white text-[clamp(2rem,5vw,4rem)] font-bold drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] animate-fadeIn sm:text-[clamp(1.5rem,6vw,2.5rem)] xs:text-[clamp(1.25rem,7vw,2rem)]">Divination</h1>
     </div>
 </div>
-<div class="informations">
-    <div class="informations-image">
-        <img src="{{ asset('../assets/images/labubu_luffy.png') }}" alt="Informations">
+<div class="informations bg-nav-bg flex items-start justify-center gap-12 py-16 px-8 w-full box-border sm:flex-col sm:gap-8 sm:py-12 sm:px-6 xs:py-8 xs:px-4 xs:gap-6">
+    <div class="informations-image flex-1 flex items-center justify-center overflow-hidden rounded-t-[50%] sm:flex-[1_1_100%] sm:max-w-full sm:w-full">
+        <img src="{{ asset('images/labubu_luffy.png') }}" alt="Informations" class="w-[70%] h-auto block object-cover transition-transform duration-300 hover:scale-105">
     </div>
-    <div class="informations-content">
-        <h2>Qui sommes-nous ?</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+    <div class="informations-content flex-1 px-4 sm:flex-[1_1_100%] sm:p-0 sm:text-center xs:p-0">
+        <h2 class="text-[clamp(1.75rem,4vw,2.5rem)] font-bold m-0 mb-6 text-[#333] xs:text-2xl">Qui sommes-nous ?</h2>
+        <p class="text-[clamp(1rem,2vw,1.125rem)] leading-[1.8] text-[#666] m-0 mb-4 xs:text-[0.95rem]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+    </div>
+</div>
+<div>
+    <h1>Ce que l'on propose</h1>
+    <div>
+        <div>
+            <h2>La divination</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+        </div>
+        <img src="{{ asset('images/divination.png') }}" alt="Divination">
+    </div>
+    <div>
+        <img src="{{ asset('images/purification.png') }}" alt="Purification">
+        <div>
+            <h2>La purification</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+        </div>
+    </div>
+    <div>
+        <div>
+            <h2>L'astrologie</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+        </div>
+        <img src="{{ asset('images/astrologie.png') }}" alt="Astrologie">
+    </div>
+    <div>
+        <img src="{{ asset('images/lithothérapie.png') }}" alt="Lithothérapie">
+        <div>
+            <h2>La lithothérapie</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+        </div>
     </div>
 </div>
 {% endblock %}

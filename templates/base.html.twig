@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Bienvenue !{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>🤓</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22></text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
         {% block stylesheets %}
         <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
         {% endblock %}
@@ -15,27 +15,49 @@
     <body>
         {% block body %}
             {% block nav %}
-            <nav>
-                <ul>
-                    <li><a href="/"><img src="../assets/images/logo.svg" alt="logo Aurora"></a></li>
-                </ul>     
-                <ul>  
-                    <li><a href="/">Accueil</a></li>
-                    <li><a href="/services">Nos Services</a></li>
-                    <li><a href="/actualites">Actualités</a></li>
-                    <li><a href="/histoire">Notre histoire</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                    <li><a href="/reservation">Réservation</a></li>
-                    <li class="dropdown">
-                        <a href="/profil" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-                            <img src="../assets/images/conne.svg" alt="Connexion/Inscription">
+            <nav class="bg-nav-bg border-b border-nav-border shadow-md px-4 md:px-8 py-4 flex justify-between items-center w-full max-w-full box-border overflow-visible transition-all duration-300 flex-row flex-wrap gap-4 sm:flex-row sm:flex-wrap sm:px-4 xs:flex-col xs:px-3 xs:gap-3">
+                <ul class="list-none m-0 p-0 flex items-center max-w-full flex-shrink-0 sm:flex-auto xs:w-full xs:justify-center xs:mb-2">
+                    <li class="m-0">
+                        <a href="/" class="flex items-center no-underline transition-all duration-300">
+                            <img src="{{ asset('images/logo.png') }}" alt="logo Aurora" class="h-[10vh] w-auto max-w-full transition-all duration-300 hover:scale-105 sm:h-10 xs:h-[35px]">
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{ path('app_profil_connexion') }}">Connexion</a></li>
-                            <li><a href="{{ path('app_profil_inscription') }}">Inscription</a></li>
+                    </li>
+                </ul>     
+                <ul class="list-none m-0 p-0 flex items-center gap-8 max-w-full flex-wrap relative overflow-visible sm:flex-1 sm:flex-wrap sm:justify-end sm:gap-3 xs:w-full xs:flex-col xs:gap-2 xs:items-stretch">  
+                    <li class="m-0 sm:flex-auto xs:w-full">
+                        <a href="/" class="nav-link text-white no-underline font-medium text-base py-2 px-4 rounded transition-all duration-300 relative flex items-center gap-2 sm:text-[clamp(0.8rem,2vw,0.9rem)] sm:py-1.5 sm:px-3 sm:whitespace-nowrap xs:text-sm xs:py-2 xs:px-4 xs:w-full xs:text-center xs:justify-center hover:text-nav-hover hover:bg-[rgba(0,123,255,0.1)]">Accueil</a>
+                    </li>
+                    <li class="m-0 sm:flex-auto xs:w-full">
+                        <a href="/services" class="nav-link text-white no-underline font-medium text-base py-2 px-4 rounded transition-all duration-300 relative flex items-center gap-2 sm:text-[clamp(0.8rem,2vw,0.9rem)] sm:py-1.5 sm:px-3 sm:whitespace-nowrap xs:text-sm xs:py-2 xs:px-4 xs:w-full xs:text-center xs:justify-center hover:text-nav-hover hover:bg-[rgba(0,123,255,0.1)]">Nos Services</a>
+                    </li>
+                    <li class="m-0 sm:flex-auto xs:w-full">
+                        <a href="/actualites" class="nav-link text-white no-underline font-medium text-base py-2 px-4 rounded transition-all duration-300 relative flex items-center gap-2 sm:text-[clamp(0.8rem,2vw,0.9rem)] sm:py-1.5 sm:px-3 sm:whitespace-nowrap xs:text-sm xs:py-2 xs:px-4 xs:w-full xs:text-center xs:justify-center hover:text-nav-hover hover:bg-[rgba(0,123,255,0.1)]">Actualités</a>
+                    </li>
+                    <li class="m-0 sm:flex-auto xs:w-full">
+                        <a href="/histoire" class="nav-link text-white no-underline font-medium text-base py-2 px-4 rounded transition-all duration-300 relative flex items-center gap-2 sm:text-[clamp(0.8rem,2vw,0.9rem)] sm:py-1.5 sm:px-3 sm:whitespace-nowrap xs:text-sm xs:py-2 xs:px-4 xs:w-full xs:text-center xs:justify-center hover:text-nav-hover hover:bg-[rgba(0,123,255,0.1)]">Notre histoire</a>
+                    </li>
+                    <li class="m-0 sm:flex-auto xs:w-full">
+                        <a href="/contact" class="nav-link text-white no-underline font-medium text-base py-2 px-4 rounded transition-all duration-300 relative flex items-center gap-2 sm:text-[clamp(0.8rem,2vw,0.9rem)] sm:py-1.5 sm:px-3 sm:whitespace-nowrap xs:text-sm xs:py-2 xs:px-4 xs:w-full xs:text-center xs:justify-center hover:text-nav-hover hover:bg-[rgba(0,123,255,0.1)]">Contact</a>
+                    </li>
+                    <li class="m-0 sm:flex-auto xs:w-full">
+                        <a href="/reservation" class="nav-link text-white no-underline font-medium text-base py-2 px-4 rounded transition-all duration-300 relative flex items-center gap-2 sm:text-[clamp(0.8rem,2vw,0.9rem)] sm:py-1.5 sm:px-3 sm:whitespace-nowrap xs:text-sm xs:py-2 xs:px-4 xs:w-full xs:text-center xs:justify-center hover:text-nav-hover hover:bg-[rgba(0,123,255,0.1)]">Réservation</a>
+                    </li>
+                    <li class="dropdown m-0 relative overflow-visible z-[1002] sm:flex-auto xs:w-full">
+                        <a href="/profil" class="dropdown-toggle cursor-pointer flex items-center py-2 px-4" aria-haspopup="true" aria-expanded="false">
+                            <img src="../assets/images/conne.svg" alt="Connexion/Inscription" class="h-6 w-auto transition-all duration-300 opacity-80 hover:opacity-100 hover:scale-110">
+                        </a>
+                        <ul class="dropdown-menu xs:relative xs:top-auto xs:left-auto xs:right-auto xs:w-full xs:min-w-full xs:mt-2 xs:transform-none xs:opacity-100 xs:visible xs:block xs:hidden">
+                            <li class="m-0">
+                                <a href="{{ path('app_profil_connexion') }}" class="flex items-center justify-between py-3 px-5 text-white no-underline text-sm font-medium transition-all duration-300 rounded-none hover:bg-[rgba(255,255,255,0.1)] hover:text-white">Connexion</a>
+                            </li>
+                            <li class="m-0">
+                                <a href="{{ path('app_profil_inscription') }}" class="flex items-center justify-between py-3 px-5 text-white no-underline text-sm font-medium transition-all duration-300 rounded-none hover:bg-[rgba(255,255,255,0.1)] hover:text-white">Inscription</a>
+                            </li>
                         </ul>
                     </li>
-                    <li><a href="/reservation">Admin</a></li>
+                    <li class="m-0 sm:flex-auto xs:w-full">
+                        <a href="/reservation" class="nav-link text-white no-underline font-medium text-base py-2 px-4 rounded transition-all duration-300 relative flex items-center gap-2 sm:text-[clamp(0.8rem,2vw,0.9rem)] sm:py-1.5 sm:px-3 sm:whitespace-nowrap xs:text-sm xs:py-2 xs:px-4 xs:w-full xs:text-center xs:justify-center hover:text-nav-hover hover:bg-[rgba(0,123,255,0.1)]">Admin</a>
+                    </li>
                 </ul>   
             </nav>
             {% endblock %}
@@ -45,40 +67,44 @@
             {% endblock %}
 
             {% block footer %}
-                <footer>
-                    <div class="footer-part-1">
-                        <h3>Informations légales</h3>
-                        <div>
-                            <a href="#">Mentions légales</a>
-                            <a href="#">Conditions d'utilisation</a>
-                            <a href="#">Politique de confidentialité</a>
-                            <a href="#">Politique de cookies</a>
+                <footer class="bg-footer-bg text-footer-text py-12 px-8 pb-6 shadow-[0_-2px_10px_rgba(0,0,0,0.1)] mt-auto flex-shrink-0 w-full box-border grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-10 border-t-[3px] border-footer-border sm:grid-cols-2 sm:gap-[clamp(1.5rem,4vw,2rem)] sm:py-[clamp(1.5rem,4vw,2rem)] sm:px-[clamp(1rem,3vw,1.5rem)] xs:grid-cols-1 xs:gap-[clamp(1rem,3vw,1.5rem)] xs:py-[clamp(1rem,3vw,1.5rem)] xs:px-[clamp(0.75rem,2vw,1rem)] md:grid-cols-3 md:gap-8 md:py-10 md:px-8">
+                    <div class="footer-part-1 flex flex-col gap-4">
+                        <h3 class="footer-heading text-footer-heading text-xl font-semibold m-0 mb-2 pb-3 border-b-2 border-footer-border relative">Informations légales</h3>
+                        <div class="flex flex-col gap-3">
+                            <a href="#" class="footer-link text-footer-link no-underline text-[0.95rem] transition-all duration-300 py-1.5 relative w-fit hover:text-footer-link-hover hover:pl-2 sm:text-[clamp(0.85rem,2vw,0.9rem)] xs:text-[clamp(0.8rem,2vw,0.85rem)]">Mentions légales</a>
+                            <a href="#" class="footer-link text-footer-link no-underline text-[0.95rem] transition-all duration-300 py-1.5 relative w-fit hover:text-footer-link-hover hover:pl-2 sm:text-[clamp(0.85rem,2vw,0.9rem)] xs:text-[clamp(0.8rem,2vw,0.85rem)]">Conditions d'utilisation</a>
+                            <a href="#" class="footer-link text-footer-link no-underline text-[0.95rem] transition-all duration-300 py-1.5 relative w-fit hover:text-footer-link-hover hover:pl-2 sm:text-[clamp(0.85rem,2vw,0.9rem)] xs:text-[clamp(0.8rem,2vw,0.85rem)]">Politique de confidentialité</a>
+                            <a href="#" class="footer-link text-footer-link no-underline text-[0.95rem] transition-all duration-300 py-1.5 relative w-fit hover:text-footer-link-hover hover:pl-2 sm:text-[clamp(0.85rem,2vw,0.9rem)] xs:text-[clamp(0.8rem,2vw,0.85rem)]">Politique de cookies</a>
                         </div>
                     </div>
-                    <div class="footer-part-2">
-                        <h3>Consultations</h3>
-                        <div>
-                            <a href="#">Avis client</a>
-                            <a href="#">Tous nos experts</a>
+                    <div class="footer-part-2 flex flex-col gap-4">
+                        <h3 class="footer-heading text-footer-heading text-xl font-semibold m-0 mb-2 pb-3 border-b-2 border-footer-border relative sm:text-[clamp(1rem,2.5vw,1.1rem)] xs:text-[clamp(0.95rem,2.5vw,1rem)]">Consultations</h3>
+                        <div class="flex flex-col gap-3 xs:gap-2">
+                            <a href="#" class="footer-link text-footer-link no-underline text-[0.95rem] transition-all duration-300 py-1.5 relative w-fit hover:text-footer-link-hover hover:pl-2 sm:text-[clamp(0.85rem,2vw,0.9rem)] xs:text-[clamp(0.8rem,2vw,0.85rem)]">Avis client</a>
+                            <a href="#" class="footer-link text-footer-link no-underline text-[0.95rem] transition-all duration-300 py-1.5 relative w-fit hover:text-footer-link-hover hover:pl-2 sm:text-[clamp(0.85rem,2vw,0.9rem)] xs:text-[clamp(0.8rem,2vw,0.85rem)]">Tous nos experts</a>
                         </div>
                     </div>
-                    <div class="footer-part-3">
-                        <h3>Service client</h3>
-                        <div>
-                            <a href="#">066485541</a>
-                            <a href="#">exampledemail@gmail.com</a>
+                    <div class="footer-part-3 flex flex-col gap-4">
+                        <h3 class="footer-heading text-footer-heading text-xl font-semibold m-0 mb-2 pb-3 border-b-2 border-footer-border relative sm:text-[clamp(1rem,2.5vw,1.1rem)] xs:text-[clamp(0.95rem,2.5vw,1rem)]">Service client</h3>
+                        <div class="flex flex-col gap-3 xs:gap-2">
+                            <a href="#" class="footer-link flex items-center gap-2 text-footer-link no-underline text-[0.95rem] transition-all duration-300 py-1.5 relative w-fit hover:text-footer-link-hover hover:pl-2 sm:text-[clamp(0.85rem,2vw,0.9rem)] xs:text-[clamp(0.8rem,2vw,0.85rem)]">066485541</a>
+                            <a href="#" class="footer-link flex items-center gap-2 text-footer-link no-underline text-[0.95rem] transition-all duration-300 py-1.5 relative w-fit hover:text-footer-link-hover hover:pl-2 sm:text-[clamp(0.85rem,2vw,0.9rem)] xs:text-[clamp(0.8rem,2vw,0.85rem)]">exampledemail@gmail.com</a>
                         </div>
                     </div>
-                    <div class="footer-part-4">
-                        <img src="../assets/images/insta.svg" alt="logo instagram">
-                        <img src="../assets/images/facebook.svg" alt="logo facebook">
-                        <img src="../assets/images/Twitter.svg" alt="logo X">
-                        <img src="../assets/images/Tiktok.svg" alt="logo Tiktok">
+                    <div class="footer-part-4 flex flex-row gap-6 justify-around items-start sm:col-span-2 sm:flex-row sm:justify-between sm:items-center sm:flex-wrap sm:gap-4 xs:col-span-1 xs:flex-col xs:items-start xs:gap-4">
+                        <div class="flex flex-row gap-4 items-center flex-wrap">
+                            <img src="../assets/images/insta.svg" alt="logo instagram" class="w-8 h-8 transition-all duration-300 cursor-pointer brightness-[0.8] hover:-translate-y-1 hover:scale-110 hover:brightness-[1.2] sm:w-[clamp(24px,5vw,28px)] sm:h-[clamp(24px,5vw,28px)] xs:w-[clamp(20px,4vw,24px)] xs:h-[clamp(20px,4vw,24px)]">
+                            <img src="../assets/images/facebook.svg" alt="logo facebook" class="w-8 h-8 transition-all duration-300 cursor-pointer brightness-[0.8] hover:-translate-y-1 hover:scale-110 hover:brightness-[1.2] sm:w-[clamp(24px,5vw,28px)] sm:h-[clamp(24px,5vw,28px)] xs:w-[clamp(20px,4vw,24px)] xs:h-[clamp(20px,4vw,24px)]">
+                            <img src="../assets/images/Twitter.svg" alt="logo X" class="w-8 h-8 transition-all duration-300 cursor-pointer brightness-[0.8] hover:-translate-y-1 hover:scale-110 hover:brightness-[1.2] sm:w-[clamp(24px,5vw,28px)] sm:h-[clamp(24px,5vw,28px)] xs:w-[clamp(20px,4vw,24px)] xs:h-[clamp(20px,4vw,24px)]">
+                            <img src="../assets/images/Tiktok.svg" alt="logo Tiktok" class="w-8 h-8 transition-all duration-300 cursor-pointer brightness-[0.8] hover:-translate-y-1 hover:scale-110 hover:brightness-[1.2] sm:w-[clamp(24px,5vw,28px)] sm:h-[clamp(24px,5vw,28px)] xs:w-[clamp(20px,4vw,24px)] xs:h-[clamp(20px,4vw,24px)]">
+                        </div>
                     </div>
-                    <a id="FAQ" href="#">FAQ</a>
+                    <a id="FAQ" href="#" class="bg-[rgba(52,152,219,0.1)] py-2.5 px-5 rounded border border-footer-link-hover text-center font-medium mt-2 w-fit hover:bg-footer-link-hover hover:text-footer-heading hover:pl-5 hover:-translate-y-0.5 hover:shadow-[0_4px_8px_rgba(0,0,0,0.2)] sm:col-span-2 xs:w-full xs:text-center">FAQ</a>
 
                 </footer>
             {% endblock %}
         {% endblock %}
     </body>
+</html>
+
 </html>

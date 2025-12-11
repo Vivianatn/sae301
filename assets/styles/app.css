@@ -1,3 +1,101 @@
-body {
-    background-color: skyblue;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Styles de base pour fixer le footer en bas */
+@layer base {
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+  
+  @media (max-width: 768px) {
+    html {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    html {
+      font-size: 13px;
+    }
+  }
+
+  html, body {
+    @apply h-full m-0 p-0 overflow-x-hidden;
+  }
+
+  body {
+    @apply flex flex-col min-h-screen box-border w-full;
+  }
+
+  body > * {
+    @apply box-border;
+  }
+
+  main {
+    @apply flex-1 w-full box-border p-0 m-0 animate-fadeIn;
+  }
+}
+
+/* Styles personnalisés pour les animations et composants */
+@layer components {
+  .dropdown-menu {
+    @apply fixed bg-[#2c3e50] border border-[#34495e] rounded shadow-lg list-none m-0 py-2 min-w-[200px] opacity-0 invisible -translate-y-2.5 scale-95 transition-all duration-300 z-[10000] overflow-visible;
+  }
+  
+  .dropdown:hover .dropdown-menu,
+  .dropdown:focus-within .dropdown-menu,
+  .dropdown-toggle[aria-expanded="true"] + .dropdown-menu {
+    @apply opacity-100 visible translate-y-0 scale-100;
+  }
+  
+  .dropdown-menu li a::after {
+    content: '›';
+    @apply ml-auto text-xl opacity-70;
+  }
+  
+  .footer-part-3 > div a:first-child::before {
+    content: '📞';
+    @apply inline-block;
+  }
+  
+  .footer-part-3 > div a:last-child::before {
+    content: '✉️';
+    @apply inline-block;
+  }
+  
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-1/2 w-0 h-0.5 bg-nav-hover transition-all duration-300 -translate-x-1/2;
+  }
+  
+  .nav-link:hover::after {
+    @apply w-4/5;
+  }
+  
+  .footer-link::before {
+    content: '';
+    @apply absolute left-0 bottom-0 w-0 h-px bg-footer-link-hover transition-all duration-300;
+  }
+  
+  .footer-link:hover::before {
+    @apply w-full;
+  }
+  
+  .footer-heading::after {
+    content: '';
+    @apply absolute -bottom-0.5 left-0 w-12 h-0.5 bg-footer-link-hover;
+  }
+  
+  /* Menu déroulant mobile */
+  @media (max-width: 480px) {
+    .dropdown-menu {
+      @apply relative top-auto left-auto right-auto w-full min-w-full mt-2 transform-none opacity-100 visible;
+    }
+    
+    .dropdown-menu.show {
+      @apply block;
+    }
+  }
 }
