@@ -1,20 +1,193 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ServicesController!{% endblock %}
+{% block title %}Nos Services{% endblock %}
 
 {% block main %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>/var/www/ws301/src/Controller/ServicesController.php</code></li>
-        <li>Your template at <code>/var/www/ws301/templates/services/index.html.twig</code></li>
-    </ul>
+<div>
+    <h1>Nos Services</h1>
+</div>
+<div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+    <img src="{{ asset('images/services.png') }}" alt="Services">
+</div>
+<img src="{{ asset('images/traits.png') }}" alt="Traits">
+<div>
+    <h2>À domicile</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+</div>
+<img src="{{ asset('images/traits.png') }}" alt="Traits">
+<div>
+    <h2>Divination à domicile</h2>
+    <div class="divination-a-domicile-container">
+        <div class="divination-a-domicile">
+            <div class="partie-droite-practicien">
+                <img src="{{ asset('images/praticien.png') }}" alt="Praticien">
+                <h3>Nom Prénom</h3>
+                <p>Voyant/Médium/etc</p>
+                <img src="{{ asset('images/note_etoile.png') }}" alt="Notes étoiles">
+                <p>4.97/5 auprès de nos utilisateurs</p>
+                <button class="btn-reserve">Réserver ce praticien</button>
+            </div>
+            <div class="partie-gauche-pratique">
+                <p>Bonjour, je suis mahin bidule, je pratique depuis truc bidule chouette, j’ai hâte de faire votre connaissance et tout là (je veux votre argent)</p>
+                <p><i>“Incroyable, c’est un génie absolu, je l’ADORE (je peux avoir mes 20 euros maintenant svp?)....“</i></p>
+                <button class="btn-reserve">Accéder aux témoignages</button>
+            </div>
+        </div>
+        <div class="divination-a-domicile">
+            <div class="partie-droite-practicien">
+                <img src="{{ asset('images/praticien.png') }}" alt="Praticien">
+                <h3>Nom Prénom</h3>
+                <p>Voyant/Médium/etc</p>
+                <img src="{{ asset('images/note_etoile.png') }}" alt="Notes étoiles">
+                <p>4.97/5 auprès de nos utilisateurs</p>
+                <button class="btn-reserve">Réserver ce praticien</button>
+            </div>
+            <div class="partie-gauche-pratique">
+                <p>Bonjour, je suis mahin bidule, je pratique depuis truc bidule chouette, j’ai hâte de faire votre connaissance et tout là (je veux votre argent)</p>
+                <p><i>“Incroyable, c’est un génie absolu, je l’ADORE (je peux avoir mes 20 euros maintenant svp?)....“</i></p>
+                <button class="btn-reserve">Accéder aux témoignages</button>
+            </div>
+        </div>
+    </div>
+    <h2>Purification</h2>
+    <div class="divination-purification-container">
+        <div class="divination-purification">
+            <div class="partie-droite-practicien">
+                <img src="{{ asset('images/praticien.png') }}" alt="Praticien">
+                <h3>Nom Prénom</h3>
+                <p>Voyant/Médium/etc</p>
+                <img src="{{ asset('images/note_etoile.png') }}" alt="Notes étoiles">
+                <p>4.97/5 auprès de nos utilisateurs</p>
+                <button class="btn-reserve">Réserver ce praticien</button>
+            </div>
+            <div class="partie-gauche-pratique">
+                <p>Bonjour, je suis mahin bidule, je pratique depuis truc bidule chouette, j’ai hâte de faire votre connaissance et tout là (je veux votre argent)</p>
+                <p><i>“Incroyable, c’est un génie absolu, je l’ADORE (je peux avoir mes 20 euros maintenant svp?)....“</i></p>
+                <button class="btn-reserve">Accéder aux témoignages</button>
+            </div>
+        </div>
+        <div class="divination-purification">
+            <div class="partie-droite-practicien">
+                <img src="{{ asset('images/praticien.png') }}" alt="Praticien">
+                <h3>Nom Prénom</h3>
+                <p>Voyant/Médium/etc</p>
+                <img src="{{ asset('images/note_etoile.png') }}" alt="Notes étoiles">
+                <p>4.97/5 auprès de nos utilisateurs</p>
+                <button class="btn-reserve">Réserver ce praticien</button>
+            </div>
+            <div class="partie-gauche-pratique">
+                <p>Bonjour, je suis mahin bidule, je pratique depuis truc bidule chouette, j’ai hâte de faire votre connaissance et tout là (je veux votre argent)</p>
+                <p><i>“Incroyable, c’est un génie absolu, je l’ADORE (je peux avoir mes 20 euros maintenant svp?)....“</i></p>
+                <button class="btn-reserve">Accéder aux témoignages</button>
+            </div>
+        </div>
+    </div>
+    <h2>Lithothérapie</h2>
+    <div class="divination-lithotherapie-container">
+        <div class="divination-lithotherapie">
+            <div class="partie-droite-practicien">
+                <img src="{{ asset('images/praticien.png') }}" alt="Praticien">
+                <h3>Nom Prénom</h3>
+                <p>Voyant/Médium/etc</p>
+                <img src="{{ asset('images/note_etoile.png') }}" alt="Notes étoiles">
+                <p>4.97/5 auprès de nos utilisateurs</p>
+                <button class="btn-reserve">Réserver ce praticien</button>
+            </div>
+            <div class="partie-gauche-pratique">
+                <p>Bonjour, je suis mahin bidule, je pratique depuis truc bidule chouette, j’ai hâte de faire votre connaissance et tout là (je veux votre argent)</p>
+                <p><i>“Incroyable, c’est un génie absolu, je l’ADORE (je peux avoir mes 20 euros maintenant svp?)....“</i></p>
+                <button class="btn-reserve">Accéder aux témoignages</button>
+            </div>
+        </div>
+        <div class="divination-lithotherapie">
+            <div class="partie-droite-practicien">
+                <img src="{{ asset('images/praticien.png') }}" alt="Praticien">
+                <h3>Nom Prénom</h3>
+                <p>Voyant/Médium/etc</p>
+                <img src="{{ asset('images/note_etoile.png') }}" alt="Notes étoiles">
+                <p>4.97/5 auprès de nos utilisateurs</p>
+                <button class="btn-reserve">Réserver ce praticien</button>
+            </div>
+            <div class="partie-gauche-pratique">
+                <p>Bonjour, je suis mahin bidule, je pratique depuis truc bidule chouette, j’ai hâte de faire votre connaissance et tout là (je veux votre argent)</p>
+                <p><i>“Incroyable, c’est un génie absolu, je l’ADORE (je peux avoir mes 20 euros maintenant svp?)....“</i></p>
+                <button class="btn-reserve">Accéder aux témoignages</button>
+            </div>
+        </div>
+    </div>
+</div>
+<img src="{{ asset('images/traits.png') }}" alt="Traits">
+<div>
+    <h2>À distance</h2>
+    <p>APPELS MAILS A NOS SPECIALISTES FLEXIBLE APPELS MAILS A NOS SPECIALISTES FLEXIBLE APPELS MAILS A NOS SPECIALISTES FLEXIBLE APPELS MAILS A NOS SPECIALISTES FLEXIBLE APPELS MAILS A NOS SPECIALISTES FLEXIBLE APPELS MAILS A NOS SPECIALISTES FLEXIBLE APPELS MAILS A NOS SPECIALISTES FLEXIBLE APPELS MAILS A NOS SPECIALISTES FLEXIBLE APPELS MAILS A NOS SPECIALISTES FLEXIBLE</p>
+</div>
+<div>
+    <h2>Divination à distance</h2>
+    <div class="divination-a-distance-container">
+        <div class="divination-a-distance">
+            <div class="partie-droite-practicien">
+                <img src="{{ asset('images/praticien.png') }}" alt="Praticien">
+                <h3>Nom Prénom</h3>
+                <p>Voyant/Médium/etc</p>
+                <img src="{{ asset('images/note_etoile.png') }}" alt="Notes étoiles">
+                <p>4.97/5 auprès de nos utilisateurs</p>
+                <button class="btn-reserve">Réserver ce praticien</button>
+            </div>
+            <div class="partie-gauche-pratique">
+                <p>Bonjour, je suis mahin bidule, je pratique depuis truc bidule chouette, j’ai hâte de faire votre connaissance et tout là (je veux votre argent)</p>
+                <p><i>“Incroyable, c’est un génie absolu, je l’ADORE (je peux avoir mes 20 euros maintenant svp?)....“</i></p>
+                <button class="btn-reserve">Accéder aux témoignages</button>
+            </div>
+        </div>
+        <div class="divination-a-distance">
+            <div class="partie-droite-practicien">
+                <img src="{{ asset('images/praticien.png') }}" alt="Praticien">
+                <h3>Nom Prénom</h3>
+                <p>Voyant/Médium/etc</p>
+                <img src="{{ asset('images/note_etoile.png') }}" alt="Notes étoiles">
+                <p>4.97/5 auprès de nos utilisateurs</p>
+                <button class="btn-reserve">Réserver ce praticien</button>
+            </div>
+            <div class="partie-gauche-pratique">
+                <p>Bonjour, je suis mahin bidule, je pratique depuis truc bidule chouette, j’ai hâte de faire votre connaissance et tout là (je veux votre argent)</p>
+                <p><i>“Incroyable, c’est un génie absolu, je l’ADORE (je peux avoir mes 20 euros maintenant svp?)....“</i></p>
+                <button class="btn-reserve">Accéder aux témoignages</button>
+            </div>
+        </div>
+    </div>
+    <h2>Astrologie</h2>
+    <div class="divination-astrologie-container">
+        <div class="divination-astrologie">
+            <div class="partie-droite-practicien">
+                <img src="{{ asset('images/praticien.png') }}" alt="Praticien">
+                <h3>Nom Prénom</h3>
+                <p>Voyant/Médium/etc</p>
+                <img src="{{ asset('images/note_etoile.png') }}" alt="Notes étoiles">
+                <p>4.97/5 auprès de nos utilisateurs</p>
+                <button class="btn-reserve">Réserver ce praticien</button>
+            </div>
+            <div class="partie-gauche-pratique">
+                <p>Bonjour, je suis mahin bidule, je pratique depuis truc bidule chouette, j’ai hâte de faire votre connaissance et tout là (je veux votre argent)</p>
+                <p><i>“Incroyable, c’est un génie absolu, je l’ADORE (je peux avoir mes 20 euros maintenant svp?)....“</i></p>
+                <button class="btn-reserve">Accéder aux témoignages</button>
+            </div>
+        </div>
+        <div class="divination-astrologie">
+            <div class="partie-droite-practicien">
+                <img src="{{ asset('images/praticien.png') }}" alt="Praticien">
+                <h3>Nom Prénom</h3>
+                <p>Voyant/Médium/etc</p>
+                <img src="{{ asset('images/note_etoile.png') }}" alt="Notes étoiles">
+                <p>4.97/5 auprès de nos utilisateurs</p>
+                <button class="btn-reserve">Réserver ce praticien</button>
+            </div>
+            <div class="partie-gauche-pratique">
+                <p>Bonjour, je suis mahin bidule, je pratique depuis truc bidule chouette, j’ai hâte de faire votre connaissance et tout là (je veux votre argent)</p>
+                <p><i>“Incroyable, c’est un génie absolu, je l’ADORE (je peux avoir mes 20 euros maintenant svp?)....“</i></p>
+                <button class="btn-reserve">Accéder aux témoignages</button>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
